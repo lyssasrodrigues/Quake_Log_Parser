@@ -12,15 +12,17 @@ Também é gerado um **ranking geral** de kills entre todos os jogos e uma **API
 ---
 
 ## Funcionalidades
-- Leitura automática do arquivo `games.log`;  
-- Agrupamento de dados por jogo (`game_1`, `game_2`, ...);  
-- Cálculo de estatísticas de cada partida;  
-- Geração de ranking geral de jogadores;  
+
+- Leitura automática do arquivo `games.log`;
+- Agrupamento de dados por jogo (`game_1`, `game_2`, ...);
+- Cálculo de estatísticas de cada partida;
+- Geração de ranking geral de jogadores;
 - API REST para consultar resultados por ID de jogo.
 
 ---
 
 ## ⚙️ Como rodar o parser
+
 ```bash
 # Instalar dependências
 pip install flask
@@ -39,20 +41,20 @@ RANKING GERAL
 Isgalamido: 2 kills
 Dono da Bola: 1 kills
 
-Como rodar a API
+🌐 Como rodar a API
 python api.py
-
 A API será iniciada em:
 http://127.0.0.1:5000
 
 Endpoints
+
 Método	Rota	Descrição
 GET	/games/<game_id>	Retorna os dados de um jogo específico (game_1, game_2, etc.)
 
-Exemplo:
+Exemplo
+Requisição:
 
-nginx
-
+bash
 GET http://127.0.0.1:5000/games/game_1
 
 Resposta:
@@ -64,7 +66,8 @@ json
   "kills": {"Isgalamido": 1, "Dono da Bola": 0}
 }
 
- Estrutura do projeto
+📁 Estrutura do projeto
+text
 .
 ├── data/
 │   └── games.log
@@ -74,9 +77,9 @@ json
 ├── api.py
 └── README.md
 
-Tecnologias usadas:
+ Tecnologias usadas
+Python 3
 
-Python 3;
-Flask (para API);
-Programação Orientada a Objetos (POO);
+Flask (para API)
 
+Programação Orientada a Objetos (POO)
